@@ -12,3 +12,7 @@ Pillow
 drf_spectacular
 django-filter
 django-redis
+django-celery-beat
+
+channels
+channels-redis

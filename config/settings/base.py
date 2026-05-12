@@ -1,5 +1,6 @@
 
 from pathlib import Path
+from celery.schedules import crontab
 
 
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -23,7 +24,9 @@ INSTALLED_APPS = [
     'apps.notifications',
     'apps.analytics',
 
-    'django_filters'
+    'django_filters',
+    'django_celery_beat',
+    'channels',
 ]
 
 MIDDLEWARE = [
@@ -54,6 +57,7 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'config.wsgi.application'
+ASGI_APPLICATION = "config.asgi.application"
 
 
 AUTH_PASSWORD_VALIDATORS = [
@@ -78,6 +82,34 @@ REST_FRAMEWORK = {
     "DEFAULT_SCHEMA_CLASS": "drf_spectacular.openapi.AutoSchema",
 }
 
+CACHES = {
+    "default": {
+        "BACKEND": "django_redis.cache.RedisCache",
+        "LOCATION": "redis://redis:6379/1",
+        "OPTIONS": {
+            "CLIENT_CLASS": "django_redis.client.DefaultClient",
+        }
+    }
+}
+
+CELERY_BROKER_URL = "redis://redis:6379/0"
+CELERY_RESULT_BACKEND = "redis://redis:6379/0"
+
+CELERY_BEAT_SCHEDULE = {
+    "daily-analytics": {
+        "task": "apps.users.tasks.generate_daily_analytics",
+        "schedule": crontab(hour=0, minute=0)
+    }
+}
+
+CHANNEL_LAYERS = {
+    "default": {
+        "BACKEND": "channels_redis.core.RedisChannelLayer",
+        "CONFIG": {
+            "hosts": [("redis", 6379)],
+        },
+    },
+}
 
 LANGUAGE_CODE = 'en-us'
 
