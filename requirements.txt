@@ -4,3 +4,11 @@ djangorestframework==3.17.1
 psycopg2-binary==2.9.12
 python-dotenv==1.2.2
 sqlparse==0.5.5
+
+djangorestframework-simplejwt
+redis
+celery
+Pillow
+drf_spectacular
+django-filter
+django-redis
