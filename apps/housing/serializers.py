@@ -1,5 +1,6 @@
 from rest_framework.serializers import ModelSerializer, IntegerField
-from .models import Property, PropertyImage, City, Category
+from .models import Property, PropertyImage, City, Category, Favourite
+from rest_framework.serializers import ValidationError
 
 class CitySerializer(ModelSerializer):
     class Meta:
@@ -34,3 +35,18 @@ class PropertySerializer(ModelSerializer):
             'images',
         ]
         read_only_fields = ['owner', 'created_at']
+
+class FavouriteSerializer(ModelSerializer):
+    class Meta:
+        model = Favourite
+        fields = '__all__'
+        read_only_fields = ['user']
+
+    def validate(self, attrs):
+        user = self.context['request'].user
+        property = attrs['property']
+
+        if Favourite.objects.filter(user=user, property=property).exists():
+            raise ValidationError("Already in favourites")
+        
+        return attrs

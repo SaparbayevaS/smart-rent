@@ -1,6 +1,7 @@
-from rest_framework.serializers import ModelSerializer, CharField
+from rest_framework.serializers import ModelSerializer, CharField, EmailField, ValidationError, Serializer
 from django.contrib.auth import get_user_model
 from .models import Profile
+from django.contrib.auth import authenticate
 
 User = get_user_model()
 
@@ -18,6 +19,7 @@ class ProfileSerializer(ModelSerializer):
         ]
     
 class RegisterSerializer(ModelSerializer):
+    
     password = CharField(write_only=True)
 
     class Meta:
@@ -35,3 +37,19 @@ class RegisterSerializer(ModelSerializer):
                 role=validated_data.get('role', 'user')
             )
             return user
+        
+class LoginSerializer(Serializer):
+    email = EmailField()
+    password = CharField(write_only=True)
+
+    def validate(self, data):
+        user = authenticate(
+            email=data["email"],
+            password=data["password"]
+        )
+
+        if not user:
+            raise ValidationError("Invalid credentials")
+        
+        data["user"] = user
+        return data

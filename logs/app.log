@@ -31,3 +31,456 @@ Traceback (most recent call last):
     )
 apps.housing.models.Property.DoesNotExist: Property matching query does not exist.
 [INFO] 2026-05-15 02:30:47,574 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2026-05-16 07:01:57,477 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2026-05-16 07:18:06,841 django.utils.autoreload: /app/apps/housing/models.py changed, reloading.
+[INFO] 2026-05-16 07:18:07,381 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2026-05-16 07:22:15,705 django.utils.autoreload: /app/apps/users/models.py changed, reloading.
+[INFO] 2026-05-16 07:22:16,221 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2026-05-16 07:22:40,057 django.utils.autoreload: /app/apps/users/models.py changed, reloading.
+[INFO] 2026-05-16 07:22:40,508 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2026-05-16 07:23:11,435 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2026-05-16 07:23:26,168 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2026-05-16 07:24:01,296 django.utils.autoreload: /app/apps/users/signals.py changed, reloading.
+[INFO] 2026-05-16 07:24:01,793 django.utils.autoreload: Watching for file changes with StatReloader
+[WARNING] 2026-05-16 07:24:05,630 django.request: Bad Request: /api/housing/properties/
+[WARNING] 2026-05-16 07:24:06,408 django.request: Forbidden: /api/housing/properties/
+[WARNING] 2026-05-16 07:26:45,837 django.request: Bad Request: /api/housing/properties/
+[WARNING] 2026-05-16 07:26:46,617 django.request: Forbidden: /api/housing/properties/
+[WARNING] 2026-05-16 07:30:01,933 django.request: Bad Request: /api/housing/properties/
+[WARNING] 2026-05-16 07:30:02,731 django.request: Forbidden: /api/housing/properties/
+[INFO] 2026-05-16 07:38:08,482 django.utils.autoreload: /app/apps/users/serializers.py changed, reloading.
+[INFO] 2026-05-16 07:38:08,998 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2026-05-16 07:42:42,879 django.utils.autoreload: /app/apps/users/views.py changed, reloading.
+[INFO] 2026-05-16 07:42:43,386 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2026-05-16 07:43:32,831 django.utils.autoreload: /app/apps/users/urls.py changed, reloading.
+[INFO] 2026-05-16 07:43:33,331 django.utils.autoreload: Watching for file changes with StatReloader
+[ERROR] 2026-05-16 07:53:40,981 django.request: Internal Server Error: /api/users/login/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.13/site-packages/django/core/handlers/base.py", line 198, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.13/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.13/site-packages/django/views/generic/base.py", line 106, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/rest_framework/views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python3.13/site-packages/rest_framework/views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "/usr/local/lib/python3.13/site-packages/rest_framework/views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "/usr/local/lib/python3.13/site-packages/rest_framework/views.py", line 503, in dispatch
+    self.initial(request, *args, **kwargs)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/rest_framework/views.py", line 421, in initial
+    self.check_permissions(request)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/rest_framework/views.py", line 338, in check_permissions
+    if not permission.has_permission(request, self):
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/rest_framework/permissions.py", line 243, in has_permission
+    queryset = self._queryset(view)
+  File "/usr/local/lib/python3.13/site-packages/rest_framework/permissions.py", line 219, in _queryset
+    assert hasattr(view, 'get_queryset') \
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        or getattr(view, 'queryset', None) is not None, (
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Cannot apply DjangoModelPermissionsOrAnonReadOnly on a view that does not set `.queryset` or have a `.get_queryset()` method.
+[ERROR] 2026-05-16 07:53:40,990 django.request: Internal Server Error: /api/users/register/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.13/site-packages/django/core/handlers/base.py", line 198, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.13/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.13/site-packages/django/views/generic/base.py", line 106, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/rest_framework/views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python3.13/site-packages/rest_framework/views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "/usr/local/lib/python3.13/site-packages/rest_framework/views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "/usr/local/lib/python3.13/site-packages/rest_framework/views.py", line 503, in dispatch
+    self.initial(request, *args, **kwargs)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/rest_framework/views.py", line 421, in initial
+    self.check_permissions(request)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/rest_framework/views.py", line 338, in check_permissions
+    if not permission.has_permission(request, self):
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/rest_framework/permissions.py", line 243, in has_permission
+    queryset = self._queryset(view)
+  File "/usr/local/lib/python3.13/site-packages/rest_framework/permissions.py", line 226, in _queryset
+    queryset = view.get_queryset()
+  File "/usr/local/lib/python3.13/site-packages/rest_framework/generics.py", line 67, in get_queryset
+    assert self.queryset is not None, (
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'RegisterView' should either include a `queryset` attribute, or override the `get_queryset()` method.
+[INFO] 2026-05-16 07:55:06,274 django.utils.autoreload: /app/apps/users/views.py changed, reloading.
+[INFO] 2026-05-16 07:55:06,768 django.utils.autoreload: Watching for file changes with StatReloader
+[ERROR] 2026-05-16 07:55:28,786 django.request: Internal Server Error: /api/users/login/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.13/site-packages/django/core/handlers/base.py", line 198, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.13/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.13/site-packages/django/views/generic/base.py", line 106, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/rest_framework/views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python3.13/site-packages/rest_framework/views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "/usr/local/lib/python3.13/site-packages/rest_framework/views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "/usr/local/lib/python3.13/site-packages/rest_framework/views.py", line 503, in dispatch
+    self.initial(request, *args, **kwargs)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/rest_framework/views.py", line 421, in initial
+    self.check_permissions(request)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/rest_framework/views.py", line 338, in check_permissions
+    if not permission.has_permission(request, self):
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/rest_framework/permissions.py", line 243, in has_permission
+    queryset = self._queryset(view)
+  File "/usr/local/lib/python3.13/site-packages/rest_framework/permissions.py", line 219, in _queryset
+    assert hasattr(view, 'get_queryset') \
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        or getattr(view, 'queryset', None) is not None, (
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Cannot apply DjangoModelPermissionsOrAnonReadOnly on a view that does not set `.queryset` or have a `.get_queryset()` method.
+[ERROR] 2026-05-16 07:55:28,792 django.request: Internal Server Error: /api/users/register/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.13/site-packages/django/core/handlers/base.py", line 198, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.13/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.13/site-packages/django/views/generic/base.py", line 106, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/rest_framework/views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python3.13/site-packages/rest_framework/views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "/usr/local/lib/python3.13/site-packages/rest_framework/views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "/usr/local/lib/python3.13/site-packages/rest_framework/views.py", line 503, in dispatch
+    self.initial(request, *args, **kwargs)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/rest_framework/views.py", line 421, in initial
+    self.check_permissions(request)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/rest_framework/views.py", line 338, in check_permissions
+    if not permission.has_permission(request, self):
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/rest_framework/permissions.py", line 243, in has_permission
+    queryset = self._queryset(view)
+  File "/usr/local/lib/python3.13/site-packages/rest_framework/permissions.py", line 219, in _queryset
+    assert hasattr(view, 'get_queryset') \
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        or getattr(view, 'queryset', None) is not None, (
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Cannot apply DjangoModelPermissionsOrAnonReadOnly on a view that does not set `.queryset` or have a `.get_queryset()` method.
+[INFO] 2026-05-16 07:59:50,517 django.utils.autoreload: /app/apps/users/views.py changed, reloading.
+[INFO] 2026-05-16 07:59:51,032 django.utils.autoreload: Watching for file changes with StatReloader
+[ERROR] 2026-05-16 08:00:24,149 django.request: Internal Server Error: /api/users/login/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.13/site-packages/django/core/handlers/base.py", line 198, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.13/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.13/site-packages/django/views/generic/base.py", line 106, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/rest_framework/views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python3.13/site-packages/rest_framework/views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "/usr/local/lib/python3.13/site-packages/rest_framework/views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "/usr/local/lib/python3.13/site-packages/rest_framework/views.py", line 503, in dispatch
+    self.initial(request, *args, **kwargs)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/rest_framework/views.py", line 421, in initial
+    self.check_permissions(request)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/rest_framework/views.py", line 338, in check_permissions
+    if not permission.has_permission(request, self):
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/rest_framework/permissions.py", line 243, in has_permission
+    queryset = self._queryset(view)
+  File "/usr/local/lib/python3.13/site-packages/rest_framework/permissions.py", line 219, in _queryset
+    assert hasattr(view, 'get_queryset') \
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        or getattr(view, 'queryset', None) is not None, (
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Cannot apply DjangoModelPermissionsOrAnonReadOnly on a view that does not set `.queryset` or have a `.get_queryset()` method.
+[WARNING] 2026-05-16 08:00:24,156 django.request: Method Not Allowed: /api/users/register/
+[ERROR] 2026-05-16 08:01:25,202 django.request: Internal Server Error: /api/users/login/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.13/site-packages/django/core/handlers/base.py", line 198, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.13/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.13/site-packages/django/views/generic/base.py", line 106, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/rest_framework/views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python3.13/site-packages/rest_framework/views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "/usr/local/lib/python3.13/site-packages/rest_framework/views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "/usr/local/lib/python3.13/site-packages/rest_framework/views.py", line 503, in dispatch
+    self.initial(request, *args, **kwargs)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/rest_framework/views.py", line 421, in initial
+    self.check_permissions(request)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/rest_framework/views.py", line 338, in check_permissions
+    if not permission.has_permission(request, self):
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/rest_framework/permissions.py", line 243, in has_permission
+    queryset = self._queryset(view)
+  File "/usr/local/lib/python3.13/site-packages/rest_framework/permissions.py", line 219, in _queryset
+    assert hasattr(view, 'get_queryset') \
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        or getattr(view, 'queryset', None) is not None, (
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Cannot apply DjangoModelPermissionsOrAnonReadOnly on a view that does not set `.queryset` or have a `.get_queryset()` method.
+[WARNING] 2026-05-16 08:01:25,209 django.request: Method Not Allowed: /api/users/register/
+[ERROR] 2026-05-16 08:02:02,150 django.request: Internal Server Error: /api/users/login/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.13/site-packages/django/core/handlers/base.py", line 198, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.13/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.13/site-packages/django/views/generic/base.py", line 106, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/rest_framework/views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python3.13/site-packages/rest_framework/views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "/usr/local/lib/python3.13/site-packages/rest_framework/views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "/usr/local/lib/python3.13/site-packages/rest_framework/views.py", line 503, in dispatch
+    self.initial(request, *args, **kwargs)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/rest_framework/views.py", line 421, in initial
+    self.check_permissions(request)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/rest_framework/views.py", line 338, in check_permissions
+    if not permission.has_permission(request, self):
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/rest_framework/permissions.py", line 243, in has_permission
+    queryset = self._queryset(view)
+  File "/usr/local/lib/python3.13/site-packages/rest_framework/permissions.py", line 219, in _queryset
+    assert hasattr(view, 'get_queryset') \
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        or getattr(view, 'queryset', None) is not None, (
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Cannot apply DjangoModelPermissionsOrAnonReadOnly on a view that does not set `.queryset` or have a `.get_queryset()` method.
+[WARNING] 2026-05-16 08:02:02,158 django.request: Method Not Allowed: /api/users/register/
+[INFO] 2026-05-16 08:03:26,727 django.utils.autoreload: /app/apps/users/views.py changed, reloading.
+[INFO] 2026-05-16 08:03:27,250 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2026-05-16 08:03:28,370 django.utils.autoreload: /app/apps/users/views.py changed, reloading.
+[INFO] 2026-05-16 08:03:28,795 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2026-05-16 08:06:27,409 django.utils.autoreload: /app/apps/users/views.py changed, reloading.
+[INFO] 2026-05-16 08:06:27,913 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2026-05-16 08:06:33,276 django.utils.autoreload: /app/apps/users/views.py changed, reloading.
+[INFO] 2026-05-16 08:06:33,731 django.utils.autoreload: Watching for file changes with StatReloader
+[ERROR] 2026-05-16 08:07:29,872 django.request: Internal Server Error: /api/users/login/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.13/site-packages/django/core/handlers/base.py", line 198, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.13/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.13/site-packages/django/views/generic/base.py", line 106, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/rest_framework/views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python3.13/site-packages/rest_framework/views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "/usr/local/lib/python3.13/site-packages/rest_framework/views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "/usr/local/lib/python3.13/site-packages/rest_framework/views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/app/apps/users/views.py", line 42, in post
+    serializer.is_valid(raise_exception=True)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/rest_framework/serializers.py", line 225, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+                           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/rest_framework/serializers.py", line 456, in run_validation
+    value = self.to_internal_value(data)
+  File "/usr/local/lib/python3.13/site-packages/rest_framework/serializers.py", line 509, in to_internal_value
+    for field in fields:
+                 ^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/rest_framework/serializers.py", line 392, in _writable_fields
+    for field in self.fields.values():
+                 ^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ~~~~~~~~~^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/rest_framework/serializers.py", line 386, in fields
+    for key, value in self.get_fields().items():
+                      ~~~~~~~~~~~~~~~^^
+  File "/usr/local/lib/python3.13/site-packages/rest_framework/serializers.py", line 1076, in get_fields
+    assert hasattr(self, 'Meta'), (
+           ~~~~~~~^^^^^^^^^^^^^^
+AssertionError: Class LoginSerializer missing "Meta" attribute
+[ERROR] 2026-05-16 08:07:30,277 django.request: Internal Server Error: /api/users/login/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.13/site-packages/django/core/handlers/base.py", line 198, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.13/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.13/site-packages/django/views/generic/base.py", line 106, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/rest_framework/views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python3.13/site-packages/rest_framework/views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "/usr/local/lib/python3.13/site-packages/rest_framework/views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "/usr/local/lib/python3.13/site-packages/rest_framework/views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/app/apps/users/views.py", line 42, in post
+    serializer.is_valid(raise_exception=True)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/rest_framework/serializers.py", line 225, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+                           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/rest_framework/serializers.py", line 456, in run_validation
+    value = self.to_internal_value(data)
+  File "/usr/local/lib/python3.13/site-packages/rest_framework/serializers.py", line 509, in to_internal_value
+    for field in fields:
+                 ^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/rest_framework/serializers.py", line 392, in _writable_fields
+    for field in self.fields.values():
+                 ^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ~~~~~~~~~^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/rest_framework/serializers.py", line 386, in fields
+    for key, value in self.get_fields().items():
+                      ~~~~~~~~~~~~~~~^^
+  File "/usr/local/lib/python3.13/site-packages/rest_framework/serializers.py", line 1076, in get_fields
+    assert hasattr(self, 'Meta'), (
+           ~~~~~~~^^^^^^^^^^^^^^
+AssertionError: Class LoginSerializer missing "Meta" attribute
+[INFO] 2026-05-16 08:10:27,021 django.utils.autoreload: /app/apps/users/serializers.py changed, reloading.
+[INFO] 2026-05-16 08:10:27,582 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2026-05-16 08:10:47,293 django.utils.autoreload: /app/apps/users/serializers.py changed, reloading.
+[INFO] 2026-05-16 08:10:47,752 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2026-05-16 08:10:54,994 django.utils.autoreload: /app/apps/users/serializers.py changed, reloading.
+[INFO] 2026-05-16 08:10:55,427 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2026-05-16 08:11:06,902 django.utils.autoreload: /app/apps/users/views.py changed, reloading.
+[INFO] 2026-05-16 08:11:07,398 django.utils.autoreload: Watching for file changes with StatReloader
+[WARNING] 2026-05-16 08:12:04,186 django.request: Bad Request: /api/housing/properties/
+[WARNING] 2026-05-16 08:12:04,963 django.request: Forbidden: /api/housing/properties/
+[WARNING] 2026-05-16 08:12:37,130 django.request: Bad Request: /api/users/login/
+[WARNING] 2026-05-16 08:14:04,020 django.request: Bad Request: /api/users/login/
+[WARNING] 2026-05-16 09:10:43,568 django.request: Not Found: /api/housing/favourites/
+[WARNING] 2026-05-16 09:10:43,809 django.request: Not Found: /api/housing/favourites/
+[WARNING] 2026-05-16 09:10:44,046 django.request: Bad Request: /api/housing/properties/
+[WARNING] 2026-05-16 09:10:44,537 django.request: Forbidden: /api/housing/properties/
+[WARNING] 2026-05-16 09:10:44,775 django.request: Not Found: /api/housing/favourites/
+[WARNING] 2026-05-16 09:10:44,776 django.request: Not Found: /api/housing/favourites/
+[WARNING] 2026-05-16 09:10:45,012 django.request: Not Found: /api/housing/favourite/1/
+[INFO] 2026-05-16 09:14:19,233 django.utils.autoreload: /app/apps/housing/serializers.py changed, reloading.
+[INFO] 2026-05-16 09:14:19,586 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2026-05-16 09:15:59,200 django.utils.autoreload: /app/apps/housing/views.py changed, reloading.
+[INFO] 2026-05-16 09:15:59,575 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2026-05-16 09:16:36,664 django.utils.autoreload: /app/apps/housing/urls.py changed, reloading.
+[INFO] 2026-05-16 09:16:37,010 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2026-05-16 09:19:04,931 django.utils.autoreload: /app/apps/housing/views.py changed, reloading.
+[INFO] 2026-05-16 09:19:05,284 django.utils.autoreload: Watching for file changes with StatReloader
+[WARNING] 2026-05-16 09:19:17,820 django.request: Forbidden: /api/housing/favourites/
+[WARNING] 2026-05-16 09:19:18,059 django.request: Bad Request: /api/housing/properties/
+[WARNING] 2026-05-16 09:19:18,539 django.request: Forbidden: /api/housing/properties/
+[WARNING] 2026-05-16 09:19:18,778 django.request: Bad Request: /api/housing/favourites/
+[WARNING] 2026-05-16 09:19:19,015 django.request: Not Found: /api/housing/favourite/1/
+[INFO] 2026-05-16 09:30:45,159 django.utils.autoreload: /app/apps/housing/views.py changed, reloading.
+[INFO] 2026-05-16 09:30:45,522 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2026-05-16 09:32:12,897 django.utils.autoreload: /app/apps/housing/views.py changed, reloading.
+[INFO] 2026-05-16 09:32:13,255 django.utils.autoreload: Watching for file changes with StatReloader
+[WARNING] 2026-05-16 09:32:21,554 django.request: Forbidden: /api/housing/favourites/
+[WARNING] 2026-05-16 09:32:21,791 django.request: Bad Request: /api/housing/properties/
+[WARNING] 2026-05-16 09:32:22,266 django.request: Forbidden: /api/housing/properties/
+[WARNING] 2026-05-16 09:32:22,504 django.request: Bad Request: /api/housing/favourites/
+[WARNING] 2026-05-16 09:32:22,741 django.request: Not Found: /api/housing/favourite/1/
+[INFO] 2026-05-16 09:35:56,170 django.utils.autoreload: /app/apps/housing/serializers.py changed, reloading.
+[INFO] 2026-05-16 09:35:56,526 django.utils.autoreload: Watching for file changes with StatReloader
+[WARNING] 2026-05-16 09:36:19,596 django.request: Forbidden: /api/housing/favourites/
+[WARNING] 2026-05-16 09:36:19,835 django.request: Bad Request: /api/housing/properties/
+[WARNING] 2026-05-16 09:36:20,318 django.request: Forbidden: /api/housing/properties/
+[WARNING] 2026-05-16 09:36:20,558 django.request: Bad Request: /api/housing/favourites/
+[WARNING] 2026-05-16 09:36:20,796 django.request: Not Found: /api/housing/favourite/1/
+[INFO] 2026-05-16 09:37:13,676 django.utils.autoreload: /app/apps/housing/urls.py changed, reloading.
+[INFO] 2026-05-16 09:37:14,090 django.utils.autoreload: Watching for file changes with StatReloader
+[WARNING] 2026-05-16 09:37:17,026 django.request: Not Found: /api/housing/favourites/
+[WARNING] 2026-05-16 09:37:17,265 django.request: Not Found: /api/housing/favourites/
+[WARNING] 2026-05-16 09:37:17,502 django.request: Bad Request: /api/housing/properties/
+[WARNING] 2026-05-16 09:37:17,975 django.request: Forbidden: /api/housing/properties/
+[WARNING] 2026-05-16 09:37:18,212 django.request: Not Found: /api/housing/favourites/
+[WARNING] 2026-05-16 09:37:18,212 django.request: Not Found: /api/housing/favourites/
+[INFO] 2026-05-16 09:37:23,429 django.utils.autoreload: /app/apps/housing/urls.py changed, reloading.
+[INFO] 2026-05-16 09:37:23,729 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2026-05-16 09:37:33,090 django.utils.autoreload: /app/apps/housing/urls.py changed, reloading.
+[INFO] 2026-05-16 09:37:33,405 django.utils.autoreload: Watching for file changes with StatReloader
+[WARNING] 2026-05-16 09:37:53,216 django.request: Not Found: /api/housing/favourites/
+[WARNING] 2026-05-16 09:37:53,457 django.request: Not Found: /api/housing/favourites/
+[WARNING] 2026-05-16 09:37:53,694 django.request: Bad Request: /api/housing/properties/
+[WARNING] 2026-05-16 09:37:54,168 django.request: Forbidden: /api/housing/properties/
+[WARNING] 2026-05-16 09:37:54,404 django.request: Not Found: /api/housing/favourites/
+[WARNING] 2026-05-16 09:37:54,405 django.request: Not Found: /api/housing/favourites/
+[WARNING] 2026-05-16 09:38:04,101 django.request: Not Found: /api/housing/favourites/
+[WARNING] 2026-05-16 09:38:04,346 django.request: Not Found: /api/housing/favourites/
+[WARNING] 2026-05-16 09:38:04,583 django.request: Bad Request: /api/housing/properties/
+[WARNING] 2026-05-16 09:38:05,056 django.request: Forbidden: /api/housing/properties/
+[WARNING] 2026-05-16 09:38:05,292 django.request: Not Found: /api/housing/favourites/
+[WARNING] 2026-05-16 09:38:05,293 django.request: Not Found: /api/housing/favourites/
+[WARNING] 2026-05-16 09:38:16,759 django.request: Not Found: /api/housing/favourites/
+[WARNING] 2026-05-16 09:38:16,999 django.request: Not Found: /api/housing/favourites/
+[WARNING] 2026-05-16 09:38:17,236 django.request: Bad Request: /api/housing/properties/
+[WARNING] 2026-05-16 09:38:17,709 django.request: Forbidden: /api/housing/properties/
+[WARNING] 2026-05-16 09:38:34,328 django.request: Not Found: /api/housing/favourites/
+[WARNING] 2026-05-16 09:38:34,567 django.request: Not Found: /api/housing/favourites/
+[WARNING] 2026-05-16 09:38:34,804 django.request: Bad Request: /api/housing/properties/
+[WARNING] 2026-05-16 09:38:35,277 django.request: Forbidden: /api/housing/properties/
+[WARNING] 2026-05-16 09:38:48,212 django.request: Bad Request: /api/housing/properties/
+[WARNING] 2026-05-16 09:38:48,689 django.request: Forbidden: /api/housing/properties/
