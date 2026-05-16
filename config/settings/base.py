@@ -32,6 +32,7 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -56,7 +57,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'config.wsgi.application'
+WSGI_APPLICATION = "config.wsgi.application"
 ASGI_APPLICATION = "config.asgi.application"
 
 
@@ -111,16 +112,59 @@ CHANNEL_LAYERS = {
     },
 }
 
-LANGUAGE_CODE = 'en-us'
 
 TIME_ZONE = 'UTC'
 
+USE_TZ = True
+
+LANGUAGE_CODE = "en"
+
 USE_I18N = True
 
-USE_TZ = True
+LANGUAGES = [
+    ("en", "English"),
+    ("ru", "Russioan"),
+    ("kz", "Kazakh"),
+]
+
+LOCALE_PATH = [
+    BASE_DIR / "locale",
+]
+
 
 STATIC_URL = 'static/'
 
 AUTH_USER_MODEL = 'users.User'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+LOGGING = {
+    "version": 1,
+    "disable_existing_loggers": False,
+
+    "formatters": {
+        "standard": {
+            "format": "[{levelname}] {asctime} {name}: {message}",
+            "style": "{",
+        },
+    },
+
+    "handlers": {
+        "console": {
+            "class": "logging.StreamHandler",
+            "formatter": "standard",
+        },
+
+        "file": {
+            "class": "logging.FileHandler",
+            "filename": "logs/app.log",
+            "formatter": "standard",
+        },
+    },
+
+    "root": {
+        "handlers": ["console", "file"],
+        "level": "INFO",
+    },
+}
