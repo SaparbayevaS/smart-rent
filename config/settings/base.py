@@ -32,7 +32,7 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
-    'django.middleware.locale.LocaleMiddleware',
+    'django.middleware.locale.LocaleMiddleware', 
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -94,6 +94,7 @@ CACHES = {
 }
 
 CELERY_BROKER_URL = "redis://redis:6379/0"
+
 CELERY_RESULT_BACKEND = "redis://redis:6379/0"
 
 CELERY_BEAT_SCHEDULE = {
@@ -122,13 +123,19 @@ LANGUAGE_CODE = "en"
 USE_I18N = True
 
 LANGUAGES = [
+
     ("en", "English"),
-    ("ru", "Russioan"),
+
+    ("ru", "Russian"),
+
     ("kz", "Kazakh"),
+
 ]
 
-LOCALE_PATH = [
+LOCALE_PATHS = [
+
     BASE_DIR / "locale",
+
 ]
 
 
