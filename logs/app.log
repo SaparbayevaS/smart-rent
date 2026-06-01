@@ -508,3 +508,12 @@ AssertionError: Class LoginSerializer missing "Meta" attribute
 [WARNING] 2026-05-16 10:46:44,945 django.request: Not Found: /api/users
 [WARNING] 2026-05-16 10:46:48,333 django.request: Not Found: /api/users/
 [WARNING] 2026-05-16 10:46:55,327 django.request: Method Not Allowed: /api/users/register/
+[INFO] 2026-06-01 22:39:22,063 django.utils.autoreload: Watching for file changes with StatReloader
+[WARNING] 2026-06-01 22:39:34,829 django.request: Not Found: /
+[WARNING] 2026-06-01 22:39:34,962 django.request: Not Found: /apple-touch-icon-precomposed.png
+[WARNING] 2026-06-01 22:39:34,975 django.request: Not Found: /apple-touch-icon-precomposed.png
+[WARNING] 2026-06-01 22:39:34,979 django.request: Not Found: /favicon.ico
+[WARNING] 2026-06-01 22:39:34,985 django.request: Not Found: /apple-touch-icon.png
+[WARNING] 2026-06-01 22:39:35,025 django.request: Not Found: /favicon.ico
+[WARNING] 2026-06-01 22:39:35,086 django.request: Not Found: /apple-touch-icon.png
+[WARNING] 2026-06-01 22:39:42,397 django.request: Not Found: /\u0444\u0432\u044c\u0448\u0442
